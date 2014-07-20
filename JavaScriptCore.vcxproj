@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="pc-vc-dev-debug|Win32">
+      <Configuration>pc-vc-dev-debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="pc-vc-dev-opt|Win32">
+      <Configuration>pc-vc-dev-opt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{545B2B54-2E05-D685-49DA-280D6D6A90D1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>JavaScriptCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-debug|Win32' " Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+    <UseDebugLibraries>True</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-opt|Win32' " Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+    <UseDebugLibraries>False</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-debug|Win32' " Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-debug|Win32' ">
+    <Midl />
+    <ClCompile>
+      <AdditionalIncludeDirectories>"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\gobject";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated";"..\..\..\..\EAWebKitSupportPackages\EABaseEAWebKit\local-2.00.35-01\include\Common";"..\..\..\..\EAWebKitSupportPackages\coreallocatorEAWebKit\local-1.03.10-01\include";"..\..\..\..\EAWebKitSupportPackages\EASTLEAWebKit\local-1.15.03-01\include";"$(VSInstallDir)\VC\ATLMFC\INCLUDE";"$(VSInstallDir)\VC\INCLUDE";"$(WindowsSDKDir)\include";"$(VSInstallDir)\SDK\v2.0\include";"$(VSInstallDir)\INCLUDE"</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>FALSE</BufferSecurityCheck>
+      <CompileAs>Default</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileOnly>TRUE</CompileOnly>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996; 4275; 4986; 4987; 4574; 4365; 4061; 4062; 4100; 4324; 4619; 4514; 4640; 4668; 4710; 4711; 4738; 4820; 4826; 4819; 4826; 4692; 4746; 4350; </DisableSpecificWarnings>
+      <ExceptionHandling>FALSE</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ForceConformanceInForLoopScope>TRUE</ForceConformanceInForLoopScope>
+      <MinimalRebuild>FALSE</MinimalRebuild>
+      <MultiProcessorCompilation>TRUE</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CHAR16T;_CRT_SECURE_NO_WARNINGS;_DEBUG;_HAS_CPP0X=0;_HAS_EXCEPTIONS=0;_SECURE_SCL=1;_WIN32_IE=0x0502;_WIN32_WINNT=0x0502;_WINDOWS;BUILDING_EA__;BUILDING_EA__=1;BUILDING_JavaScriptCore;BUILDING_WTF;EA_DEBUG;EASTL_NOMINMAX=0;EAWEBKIT_PLATFORM_HEADER=&lt;windows.h&gt;;JS_NO_EXPORT;UNICODE;USE_SYSTEM_MALLOC=1;WIN32;WINVER=0x0502</PreprocessorDefinitions>
+      <ProcessorNumber>8</ProcessorNumber>
+      <ProgramDataBaseFileName>pc-vc-dev-debug\lib\JavaScriptCore.pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>FALSE</RuntimeTypeInfo>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>pc-vc-dev-debug\lib\JavaScriptCore.lib</OutputFile>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+    </Lib>
+    <PreBuildEvent>
+      <Command>@if not exist "pc-vc-dev-debug\lib" mkdir "pc-vc-dev-debug\lib" &amp; SET ERRORLEVEL=0
+@if not exist "pc-vc-dev-debug\build\JavaScriptCore" mkdir "pc-vc-dev-debug\build\JavaScriptCore" &amp; SET ERRORLEVEL=0</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-debug|Win32' ">
+    <OutDir>pc-vc-dev-debug\lib\</OutDir>
+    <IntDir>pc-vc-dev-debug\build\JavaScriptCore\vstmp\</IntDir>
+    <TargetName>JavaScriptCore</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-opt|Win32' " Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-opt|Win32' ">
+    <Midl />
+    <ClCompile>
+      <AdditionalIncludeDirectories>"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\gobject";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders";"..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated";"..\..\..\..\EAWebKitSupportPackages\EABaseEAWebKit\local-2.00.35-01\include\Common";"..\..\..\..\EAWebKitSupportPackages\coreallocatorEAWebKit\local-1.03.10-01\include";"..\..\..\..\EAWebKitSupportPackages\EASTLEAWebKit\local-1.15.03-01\include";"$(VSInstallDir)\VC\ATLMFC\INCLUDE";"$(VSInstallDir)\VC\INCLUDE";"$(WindowsSDKDir)\include";"$(VSInstallDir)\SDK\v2.0\include";"$(VSInstallDir)\INCLUDE"</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck>FALSE</BufferSecurityCheck>
+      <CompileAs>Default</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileOnly>TRUE</CompileOnly>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996; 4275; 4986; 4987; 4574; 4365; 4061; 4062; 4100; 4324; 4619; 4514; 4640; 4668; 4710; 4711; 4738; 4820; 4826; 4819; 4826; 4692; 4746; 4350; </DisableSpecificWarnings>
+      <ExceptionHandling>FALSE</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ForceConformanceInForLoopScope>TRUE</ForceConformanceInForLoopScope>
+      <MinimalRebuild>FALSE</MinimalRebuild>
+      <MultiProcessorCompilation>TRUE</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CHAR16T;_CRT_SECURE_NO_WARNINGS;_HAS_CPP0X=0;_HAS_EXCEPTIONS=0;_SECURE_SCL=0;_WIN32_IE=0x0502;_WIN32_WINNT=0x0502;_WINDOWS;BUILDING_EA__;BUILDING_EA__=1;BUILDING_JavaScriptCore;BUILDING_WTF;EASTL_NOMINMAX=0;EAWEBKIT_PLATFORM_HEADER=&lt;windows.h&gt;;JS_NO_EXPORT;NDEBUG;UNICODE;USE_SYSTEM_MALLOC=1;WIN32;WINVER=0x0502</PreprocessorDefinitions>
+      <ProcessorNumber>8</ProcessorNumber>
+      <ProgramDataBaseFileName>pc-vc-dev-opt\lib\JavaScriptCore.pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>FALSE</RuntimeTypeInfo>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>pc-vc-dev-opt\lib\JavaScriptCore.lib</OutputFile>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+    </Lib>
+    <PreBuildEvent>
+      <Command>@if not exist "pc-vc-dev-opt\lib" mkdir "pc-vc-dev-opt\lib" &amp; SET ERRORLEVEL=0
+@if not exist "pc-vc-dev-opt\build\JavaScriptCore" mkdir "pc-vc-dev-opt\build\JavaScriptCore" &amp; SET ERRORLEVEL=0</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'pc-vc-dev-opt|Win32' ">
+    <OutDir>pc-vc-dev-opt\lib\</OutDir>
+    <IntDir>pc-vc-dev-opt\build\JavaScriptCore\vstmp\</IntDir>
+    <TargetName>JavaScriptCore</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\config.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\JavaScriptCorePrefix.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\APICast.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\APIShims.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JavaScript.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JavaScriptCore.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSBase.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSBase.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSBasePrivate.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSCallbackConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSCallbackConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSCallbackFunction.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSCallbackFunction.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSCallbackObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSCallbackObject.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSCallbackObjectFunctions.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSClassRef.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSClassRef.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSContextRef.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSContextRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSContextRefPrivate.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSObjectRef.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSObjectRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSObjectRefPrivate.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSProfilerPrivate.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSRetainPtr.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSSettingsEA.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSSettingsEA.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSStringRef.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSStringRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSStringRefBSTR.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSStringRefCF.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSTextInterface.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSTextInterface.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSValueRef.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSValueRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSWeakObjectMapRefInternal.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\JSWeakObjectMapRefPrivate.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\OpaqueJSString.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\OpaqueJSString.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\WebKitAvailability.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\tests\JSNode.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\tests\JSNodeList.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\tests\Node.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\API\tests\NodeList.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\AbstractMacroAssembler.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\ARMAssembler.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\ARMAssembler.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\ARMv7Assembler.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\ARMv7Assembler.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\AssemblerBuffer.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\AssemblerBufferWithConstantPool.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\CodeLocation.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\LinkBuffer.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssembler.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerARM.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerARM.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerARMv7.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerCodeRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerMIPS.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerSH4.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerSH4.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerX86.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerX86_64.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MacroAssemblerX86Common.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\MIPSAssembler.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\RepatchBuffer.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\SH4Assembler.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\assembler\X86Assembler.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\CodeBlock.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\CodeBlock.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\EvalCodeCache.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\Instruction.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\JumpTable.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\JumpTable.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\Opcode.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\Opcode.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\PredictedType.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\PredictedType.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\PredictionTracker.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\SamplingTool.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\SamplingTool.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\StructureStubInfo.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\StructureStubInfo.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\ValueProfile.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecode\ValueProfile.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler\BytecodeGenerator.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler\BytecodeGenerator.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler\Label.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler\LabelScope.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler\NodesCodegen.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\bytecompiler\RegisterID.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger\Debugger.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger\Debugger.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger\DebuggerActivation.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger\DebuggerActivation.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger\DebuggerCallFrame.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\debugger\DebuggerCallFrame.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGAliasTracker.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGByteCodeParser.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGByteCodeParser.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGCapabilities.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGDriver.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGFPRInfo.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGGenerationInfo.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGGPRInfo.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGGraph.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGGraph.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGJITCodeGenerator.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGJITCodeGenerator.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGJITCompiler.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGJITCompiler.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGNode.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGNonSpeculativeJIT.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGNonSpeculativeJIT.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGOperations.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGOperations.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGOSREntry.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGPropagator.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGRegisterBank.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGRepatch.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGScoreBoard.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGSpeculativeJIT.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\dfg\DFGSpeculativeJIT.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\APICast.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\APIShims.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JavaScript.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JavaScriptCore.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JSBase.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JSContextRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JSObjectRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JSRetainPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JSStringRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JSStringRefCF.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\JSValueRef.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\OpaqueJSString.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\ForwardingHeaders\JavaScriptCore\WebKitAvailability.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\ArrayConstructor.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\ArrayPrototype.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\BooleanPrototype.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\DateConstructor.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\DatePrototype.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\ErrorPrototype.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\GeneratedJITStubs_RVCT.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\JSGlobalObject.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\JSONObject.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\KeywordLookup.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\Lexer.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\MathObject.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\NumberConstructor.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\NumberPrototype.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\ObjectConstructor.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\ObjectPrototype.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\RegExpConstructor.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\RegExpJitTables.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\RegExpObject.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\RegExpPrototype.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\StringConstructor.lut.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\generated\StringPrototype.lut.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\ConservativeRoots.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\ConservativeRoots.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\Handle.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\HandleHeap.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\HandleHeap.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\HandleStack.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\HandleStack.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\HandleTypes.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\Heap.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\Heap.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\HeapRootVisitor.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\Local.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\LocalScope.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\MachineStackMarker.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\MachineStackMarker.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\MarkedBlock.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\MarkedBlock.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\MarkedBlockSet.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\MarkStack.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\MarkStack.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\NewSpace.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\NewSpace.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\SlotVisitor.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\Strong.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\TinyBloomFilter.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\VTableSpectrum.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\VTableSpectrum.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\Weak.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\WeakReferenceHarvester.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\WriteBarrierSupport.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\heap\WriteBarrierSupport.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\CachedCall.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\CallFrame.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\CallFrame.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\CallFrameClosure.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\Interpreter.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\Interpreter.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\Register.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\RegisterFile.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\interpreter\RegisterFile.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\CompactJITCodeMap.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\ExecutableAllocator.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\ExecutableAllocator.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\ExecutableAllocatorFixedVMPool.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JIT.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JIT.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITArithmetic.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITArithmetic32_64.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITCall.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITCall32_64.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITCode.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITInlineMethods.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITOpcodes.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITOpcodes32_64.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITPropertyAccess.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITPropertyAccess32_64.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITStubCall.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITStubs.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITStubs.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JITWriteBarrier.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\JSInterfaceJIT.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\SpecializedThunkJIT.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\ThunkGenerators.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\jit\ThunkGenerators.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\os-win32\inttypes.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\os-win32\stdbool.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\os-win32\stdint.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\ASTBuilder.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\JSParser.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\JSParser.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\Lexer.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\Lexer.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\NodeConstructors.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\NodeInfo.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\Nodes.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\Nodes.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\Parser.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\Parser.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\ParserArena.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\ParserArena.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\ResultType.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\SourceCode.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\SourceProvider.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\SourceProviderCache.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\SourceProviderCache.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\SourceProviderCacheItem.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\parser\SyntaxChecker.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\CallIdentifier.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\Profile.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\Profile.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\ProfileGenerator.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\ProfileGenerator.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\ProfileNode.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\ProfileNode.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\Profiler.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\Profiler.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\profiler\ProfilerServer.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ArgList.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ArgList.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Arguments.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Arguments.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ArrayConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ArrayConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ArrayPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ArrayPrototype.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BatchedTransitionOptimizer.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BigInteger.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BooleanConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BooleanConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BooleanObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BooleanObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BooleanPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\BooleanPrototype.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\CachedTranscendentalFunction.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\CallData.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\CallData.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ClassInfo.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\CommonIdentifiers.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\CommonIdentifiers.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Completion.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Completion.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ConstructData.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ConstructData.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DateConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DateConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DateConversion.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DateConversion.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DateInstance.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DateInstance.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DateInstanceCache.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DatePrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\DatePrototype.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Error.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Error.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ErrorConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ErrorConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ErrorInstance.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ErrorInstance.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ErrorPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ErrorPrototype.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ExceptionHelpers.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ExceptionHelpers.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Executable.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Executable.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\FunctionConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\FunctionConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\FunctionPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\FunctionPrototype.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\GCActivityCallback.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\GCActivityCallback.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\GetterSetter.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\GetterSetter.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Identifier.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Identifier.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\InitializeThreading.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\InitializeThreading.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\InternalFunction.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\InternalFunction.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSActivation.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSActivation.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSAPIValueWrapper.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSAPIValueWrapper.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSArray.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSArray.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSByteArray.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSByteArray.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSCell.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSCell.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSChunk.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSFunction.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSFunction.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSGlobalData.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSGlobalData.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSGlobalObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSGlobalObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSGlobalObjectFunctions.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSGlobalObjectFunctions.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSLock.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSLock.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSNotAnObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSNotAnObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSONObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSONObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSPropertyNameIterator.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSPropertyNameIterator.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSStaticScopeObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSStaticScopeObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSString.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSString.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSStringBuilder.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSType.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSTypeInfo.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSValue.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSValue.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSValueInlineMethods.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSVariableObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSVariableObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSWrapperObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\JSWrapperObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\LiteralParser.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\LiteralParser.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Lookup.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Lookup.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\MathObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\MathObject.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\MemoryStatistics.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NativeErrorConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NativeErrorConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NativeErrorPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NativeErrorPrototype.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NumberConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NumberConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NumberObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NumberObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NumberPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NumberPrototype.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\NumericStrings.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ObjectConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ObjectConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ObjectPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ObjectPrototype.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Operations.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Operations.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PropertyDescriptor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PropertyDescriptor.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PropertyMapHashTable.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PropertyNameArray.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PropertyNameArray.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PropertySlot.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PropertySlot.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Protect.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\PutPropertySlot.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExp.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExp.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpCache.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpCache.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpConstructor.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpKey.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpMatchesArray.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpObject.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RegExpPrototype.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RopeImpl.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\RopeImpl.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\SamplingCounter.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\SamplingCounter.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ScopeChain.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ScopeChain.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\ScopeChainMark.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\SmallStrings.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\SmallStrings.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StorageBarrier.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StrictEvalActivation.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StrictEvalActivation.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringConstructor.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringConstructor.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringObject.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringObject.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringObjectThatMasqueradesAsUndefined.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringPrototype.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringPrototype.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringRecursionChecker.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StringRecursionChecker.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Structure.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Structure.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StructureChain.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StructureChain.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\StructureTransitionTable.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\SymbolTable.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Terminator.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\TimeoutChecker.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\TimeoutChecker.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Tracing.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\Uint16WithFraction.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\UString.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\UString.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\UStringBuilder.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\UStringConcatenate.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\WeakGCMap.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\WeakRandom.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\runtime\WriteBarrier.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Alignment.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\AlwaysInline.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ASCIICType.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Assertions.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Assertions.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Atomics.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\AVLTree.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Bitmap.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\BlockStack.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\BloomFilter.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\BoundsCheckedPointer.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\BumpPointerAllocator.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ByteArray.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ByteArray.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\CheckedArithmetic.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Compiler.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Complex.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\CrossThreadRefCounted.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\CryptographicallyRandomNumber.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\CryptographicallyRandomNumber.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\CurrentTime.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\CurrentTime.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\DateMath.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\DateMath.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\DecimalNumber.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\DecimalNumber.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Decoder.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Deque.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\DisallowCType.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\DoublyLinkedList.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\DynamicAnnotations.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Encoder.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ExportMacros.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\FastAllocBase.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\FastMalloc.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\FastMalloc.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\FixedArray.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Forward.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\GetPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashCountedSet.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashFunctions.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashIterators.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashMap.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashSet.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashTable.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashTable.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HashTraits.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\HexNumber.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ListHashSet.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ListRefPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Locker.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MainThread.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MainThread.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MallocZoneSupport.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MathExtras.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MD5.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MD5.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MessageQueue.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MetaAllocator.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MetaAllocator.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\MetaAllocatorHandle.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Noncopyable.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\NonCopyingSort.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\NotFound.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\NullPtr.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\NullPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\OSAllocator.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\OSRandomSource.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\OSRandomSource.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\OwnArrayPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\OwnFastMallocPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\OwnPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\OwnPtrCommon.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PageAllocation.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PageAllocationAligned.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PageAllocationAligned.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PageAllocatorSymbian.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PageBlock.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PageBlock.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PageReservation.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ParallelJobs.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ParallelJobsGeneric.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ParallelJobsGeneric.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ParallelJobsLibdispatch.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ParallelJobsOpenMP.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PassOwnArrayPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PassOwnPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PassRefPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PassTraits.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Platform.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\PossiblyNull.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RandomNumber.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RandomNumber.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RandomNumberSeed.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RedBlackTree.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RefCounted.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RefCountedLeakCounter.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RefCountedLeakCounter.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RefPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RefPtrHashMap.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\RetainPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\SegmentedVector.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\SentinelLinkedList.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\SHA1.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\SHA1.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\SinglyLinkedList.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\StackBounds.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\StackBounds.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\StaticConstructors.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\StdLibExtras.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\StringExtras.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\StringHasher.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\TCPackedCache.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\TCPageMap.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\TCSpinLock.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\TCSystemAlloc.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\TCSystemAlloc.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ThreadFunctionInvocation.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ThreadIdentifierDataPthreads.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Threading.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Threading.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ThreadingPrimitives.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ThreadRestrictionVerifier.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ThreadSafeRefCounted.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ThreadSpecific.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\TypeTraits.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\TypeTraits.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\UnusedParam.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ValueCheck.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\Vector.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\VectorTraits.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\VMTags.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\WTFThreadData.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\WTFThreadData.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\bignum.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\bignum.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\bignum-dtoa.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\bignum-dtoa.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\cached-powers.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\cached-powers.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\diy-fp.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\diy-fp.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\double.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\double-conversion.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\double-conversion.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\fast-dtoa.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\fast-dtoa.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\fixed-dtoa.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\fixed-dtoa.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\strtod.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\strtod.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\dtoa\utils.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ea\MainThreadEA.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ea\OSAllocatorEA.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\ea\ThreadingEA.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\gobject\GOwnPtr.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\gobject\GOwnPtr.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\gobject\GRefPtr.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\gobject\GRefPtr.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\gobject\GTypedefs.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\AtomicString.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\AtomicString.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\AtomicStringHash.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\AtomicStringImpl.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\CString.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\CString.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringBuffer.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringBuilder.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringBuilder.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringConcatenate.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringHash.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringImpl.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringImpl.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringImplBase.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringOperators.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\StringStatics.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\TextPosition.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\WTFString.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\text\WTFString.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\threads\BinarySemaphore.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\CharacterNames.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\Collator.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\ScriptCodesFromICU.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\Unicode.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\UnicodeMacrosFromICU.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\UTF8.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\UTF8.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\ea\CollatorEA.cpp" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\ea\UnicodeEA.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\ea\UnicodeEA.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\wtf\unicode\glib\UnicodeGLib.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\Yarr.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrInterpreter.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrInterpreter.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrJIT.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrJIT.h" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrParser.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrPattern.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrPattern.h" />
+    <ClCompile Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrSyntaxChecker.cpp" />
+    <ClInclude Include="..\..\..\..\EAWebKitSupportPackages\JavaScriptCore\local\JavaScriptCore\yarr\YarrSyntaxChecker.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties platform_pc-vc-dev-debug_Win32="vc" vc-compiler="$(VSInstallDir)\VC\BIN\cl.exe" vc-compiler_clang="" vc-asm="$(VSInstallDir)\VC\BIN\ml.exe" vc-librarian="$(VSInstallDir)\VC\BIN\lib.exe" platform_pc-vc-dev-opt_Win32="vc" build.env.PATH="$(VSInstallDir)\Common7\IDE"></UserProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
