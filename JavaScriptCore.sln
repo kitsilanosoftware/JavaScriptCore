@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JavaScriptCore", "JavaScriptCore.vcxproj", "{545B2B54-2E05-D685-49DA-280D6D6A90D1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EABase", "..\EABase\EABase.vcxproj", "{4BDF4923-7B0C-4D2A-B28D-D6E677957454}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coreallocator", "..\coreallocator\coreallocator.vcxproj", "{D3DC8429-BA58-403F-91FC-D12AE8C18795}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EASTL", "..\EASTL\EASTL.vcxproj", "{78409D29-B35B-AA23-A876-C2A40BC812AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{545B2B54-2E05-D685-49DA-280D6D6A90D1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{545B2B54-2E05-D685-49DA-280D6D6A90D1}.Debug|Win32.Build.0 = Debug|Win32
+		{545B2B54-2E05-D685-49DA-280D6D6A90D1}.Release|Win32.ActiveCfg = Release|Win32
+		{545B2B54-2E05-D685-49DA-280D6D6A90D1}.Release|Win32.Build.0 = Release|Win32
+		{4BDF4923-7B0C-4D2A-B28D-D6E677957454}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BDF4923-7B0C-4D2A-B28D-D6E677957454}.Debug|Win32.Build.0 = Debug|Win32
+		{4BDF4923-7B0C-4D2A-B28D-D6E677957454}.Release|Win32.ActiveCfg = Release|Win32
+		{4BDF4923-7B0C-4D2A-B28D-D6E677957454}.Release|Win32.Build.0 = Release|Win32
+		{D3DC8429-BA58-403F-91FC-D12AE8C18795}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D3DC8429-BA58-403F-91FC-D12AE8C18795}.Debug|Win32.Build.0 = Debug|Win32
+		{D3DC8429-BA58-403F-91FC-D12AE8C18795}.Release|Win32.ActiveCfg = Release|Win32
+		{D3DC8429-BA58-403F-91FC-D12AE8C18795}.Release|Win32.Build.0 = Release|Win32
+		{78409D29-B35B-AA23-A876-C2A40BC812AD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{78409D29-B35B-AA23-A876-C2A40BC812AD}.Debug|Win32.Build.0 = Debug|Win32
+		{78409D29-B35B-AA23-A876-C2A40BC812AD}.Release|Win32.ActiveCfg = Release|Win32
+		{78409D29-B35B-AA23-A876-C2A40BC812AD}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

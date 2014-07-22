@@ -44,7 +44,7 @@
 //+EAWebKitChange
 //10/17/2011
 #if PLATFORM(EA)
-#include <../../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebkitAllocator.h>
+#include <../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebkitAllocator.h>
 #endif
 //-EAWebKitChange
 

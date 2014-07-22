@@ -32,7 +32,7 @@
 
 // It's a layering violation to include this file from here but it is a trick we can play since JavaScriptCore is embedded inside
 // EAWebKit package.
-#include <../../../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebkitAllocator.h>
+#include <../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebkitAllocator.h>
 
 namespace WTF {
 

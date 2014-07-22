@@ -54,7 +54,7 @@
 #elif PLATFORM(QT)
 #include <QThreadStorage>
 #elif PLATFORM(EA)
-#include <../../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebKitThreadInterface.h>
+#include <../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebKitThreadInterface.h>
 #elif PLATFORM(GTK)
 #include <glib.h>
 #elif OS(WINDOWS)

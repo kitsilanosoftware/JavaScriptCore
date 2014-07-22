@@ -40,7 +40,7 @@
 #include <wtf/WTFThreadData.h>
 #include <wtf/Assertions.h>
 
-#include <../../../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebKitThreadInterface.h>
+#include <../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebKitThreadInterface.h>
 
 
 #if !ENABLE(SINGLE_THREADED)

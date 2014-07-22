@@ -36,7 +36,7 @@
 
 //+EAWebKitChange
 //03/04/2013
-#include <../../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebKitThreadInterface.h>
+#include <../../../../WebKit/ea/Api/EAWebKit/include/EAWebKit/EAWebKitThreadInterface.h>
 //-EAWebKitChange
 
 //+EAWebKitChange
